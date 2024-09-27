@@ -1,4 +1,4 @@
-package cc.openhome;
+
 
 public class Level2 {
     public static void main(String[] args) {
@@ -10,7 +10,7 @@ public class Level2 {
             case 10: 
             case 9: 
                 level = 'A';
-                break; 
+                break; //表示跳出,也可用於迴圈
             case 8: 
                 level = 'B';
                 break; 
@@ -20,9 +20,9 @@ public class Level2 {
             case 6: 
                 level = 'D';
                 break; 
-            default: 
+            default: //以上皆非,則取此
                 level = 'E';
         }
-        System.out.printf("�o�����šG%c%n", level);
+        System.out.printf("得分等級 %c%n", level);
     }
 }

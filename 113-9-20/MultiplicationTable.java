@@ -1,5 +1,5 @@
-package cc.openhome;
 
+//九九乘法表
 public class MultiplicationTable {
     public static void main(String[] args) {
         for(var j = 1; j < 10; j++) { 

@@ -1,4 +1,4 @@
-package cc.openhome;
+
 
 public class Level {
     public static void main(String[] args) {
@@ -20,6 +20,6 @@ public class Level {
         else {
             level = 'E';
         }
-        System.out.printf("±o¤Àµ¥¯Å¡G%c%n", level);
+        System.out.printf("å¾—åˆ†ç­‰ç´š: %c%n", level);
     }
 }
