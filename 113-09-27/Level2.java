@@ -3,7 +3,10 @@ import java.util.Scanner;
 
 public class Level2 {
     public static void main(String[] args) {
+       
         char level = '\0';
+
+
         Scanner input = new Scanner(System.in);
         System.out.print("請輸入分數: ");
         
