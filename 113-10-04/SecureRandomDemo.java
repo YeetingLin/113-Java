@@ -1,8 +1,9 @@
 
-
+import  java.security.SecureRandom;
 
 public class SecureRandomDemo {
     public static void main(String[] args) {
+        SecureRandom randomNumber = new SecureRandom();
         while(true) {
             var number = (int) (Math.random() * 10);
             System.out.println(number);
