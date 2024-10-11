@@ -1,4 +1,3 @@
-package cc.openhome;
 
 public class TextBlock {
     public static void main(String[] args) {
