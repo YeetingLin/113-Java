@@ -24,6 +24,6 @@ public class Student {
         return  name;
     }
     public  void setName(String name){
-        System.out.printf("學號: %s ,姓名: %s",studentID,name);
+        System.out.printf("%s %s",studentID,name);
     }
 }

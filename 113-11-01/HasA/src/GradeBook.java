@@ -28,34 +28,61 @@ public  void displayMessage(){
 
         }
     }
-    public  double getMaximum(){
-    double max = grades[0];
-    for(int i =i; i< numberOfStudents;i++){
-        if(grades[i]< min){
-            min = grades[i];
+    public  double getMaximum() {
+        double max = grades[0];
+        for (int i = 1; i < numberOfStudents; i++) {
+            if (grades[i] > max) {
+                max = grades[i];
+            }
+        }
+        return max;
+
+        public double getMinimum () {
+            double min = grades[0];
+            for (int i = 1; i < numberOfStudents; i++) {
+                if (grades[i] < min) {
+                    min = grades[i];
+                }
+            }
+            return min;
+        }
+        public double getAverage () {
+            double sum = 0;
+            for (int i = 0; i < numberOfStudents; i++) {
+                sum += grades[i];
+            }
+            return sum / numberOfStudents;
+        }
+
+        public void displayGradeReport() {
+            System.out.println("成績報告:");
+            System.out.println("學號\t 姓名\t 成績");
+            System.out.println("--------------------------");
+            for (int i = 0; i < numberOfStudents; i++) {
+                students[i].printData();
+                System.out.printf(" %.1f\n", grades[i]);
+            }
+            System.out.println("--------------------------");
+            System.out.printf("最高分:%.1f\n", getMaximum());
+            System.out.printf("最低分:%.1f\n", getMinimum());
+            System.out.printf("平均分:%.1f\n", getAverage());
+
+        }
+
+
+        public void processsStudents() {
+            for (Student student : students) {
+                student.printData();
+            }
+        }
+
+        public void processStudents (Student[]students){
+            for (Student student : students) {
+                student.printData();
+            }
+        }
+        public void printData() {
+            System.out.printf("%s %s", studentID, name);
         }
     }
-    return  min;
-    }
-    public  double getAverage() {
-    double sum = 0;
-    for(int i=0;i<numberOfStudents;i++){
-        sum += grades[i];
-    }
-    return  sum/ numberOfStudents;
-    }
-
-
-public  void processsStudents(){
-    for(Student student :students){
-        student.printData();
-    }
-}
-
-public  void processStudents(Student[] students){
-    for (Student student : students){
-        student.printData();
-    }
-}
-
 }
