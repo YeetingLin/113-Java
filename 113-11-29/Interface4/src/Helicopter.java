@@ -5,6 +5,7 @@ public class Helicopter extends Airplane {
     
     @Override
     public void fly() {
-        System.out.printf("直升機 %s 在飛%n", getName());
+        System.out.printf("直升機 %s 在飛%n");
+        super.fly();
     }
 }
